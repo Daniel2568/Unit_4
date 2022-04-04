@@ -26,7 +26,7 @@ Example 1
     # contract goes here
     def pluralize_words(word_list):
         # your code goes here
-​
+
     word_list = ['apple', 'berry', 'melon']
     print(f"Singular words: {word_list}")
     pluralize_words(word_list)
@@ -64,7 +64,7 @@ Example 2
     # contract goes here
     def my_reverse(string_to_reverse):
         # your code goes here
-​
+
     reversed = my_reverse("apples")
     print(reversed)
     # examples go here
@@ -85,3 +85,5 @@ Extension
 Create a function reverse_strings_in_list. This function will input a list of strings you want to reverse. 
 The function will reverse the strings in the list by calling the my_reverse function in a loop.
 '''
+word_list = ['apple', 'berry', 'melon']
+print(f"Singular words: {word_list}")
