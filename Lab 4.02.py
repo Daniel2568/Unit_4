@@ -85,5 +85,38 @@ Extension
 Create a function reverse_strings_in_list. This function will input a list of strings you want to reverse. 
 The function will reverse the strings in the list by calling the my_reverse function in a loop.
 '''
-word_list = ['apple', 'berry', 'melon']
-print(f"Singular words: {word_list}")
+#Part 1 pluralizing words in list
+# def pluralize_words(word_list):
+#     for c in range(len(word_list)):
+#         if word_list[c][-1]== 'y':
+#             word_list[c] = word_list[c][:len(word_list[c])-1] + 'ies'
+#         else:
+#             word_list[c] += 's'
+
+
+# word_list = ['apple', 'berry', 'melon']
+# print(f"Singular words: {word_list}")
+# pluralize_words(word_list)
+# print(f"No longer singular words: {word_list}")
+
+#Part 2 reversing strings
+# def my_reverse(string_to_reverse):
+#     return string_to_reverse[::-1]
+
+# reversed = my_reverse("apples")
+# print(reversed)
+
+#Part 3 reversing strings in list
+my_list = ['apple', 'berry', 'melon']
+def my_reverse(string_to_reverse):
+    return string_to_reverse[::-1]
+
+def reverse_strings_in_list(list_to_reverse):
+    reversed_list = []
+
+    for item in list_to_reverse:
+        reversed_list.append(my_reverse(item))
+
+    return reversed_list 
+
+print(reverse_strings_in_list(my_list))
