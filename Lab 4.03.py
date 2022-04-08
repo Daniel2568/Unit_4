@@ -17,6 +17,16 @@ For each of the following problems, you will write a function that will draw the
     * * * * * * *
     * * * * * * *
     * * * * * * *
+
+def draw_7():
+    for i in range(7):
+        my_string = ''
+        for i in range(0, 7):
+            my_string += ' *'
+        print(my_string)
+
+draw_7()
+
 2.  Write a function stars_and_stripes, that will draw a 3 sets of rows. 1st a row of 7 stars followed by a row of 7 dashes (shown below)
 
     * * * * * * *
@@ -25,6 +35,22 @@ For each of the following problems, you will write a function that will draw the
     - - - - - - -
     * * * * * * *
     - - - - - - -
+
+def stars_and_stripes():
+    for i in range(3):
+        star_string = ''
+        for i in range(7):
+            star_string += ' *'
+        print(star_string)
+
+
+        dash_string = ''
+        for i in range(7):
+            dash_string += ' -'
+        print(dash_string)
+
+stars_and_stripes()
+
 3.  Write a function, increasing_triangle that will print out the following:
 
     1
@@ -80,7 +106,3 @@ For each of the following problems, you will write a function that will draw the
         *****
     
 '''
-# Write the code for your custom function below:
-def my_function():
-    # replace 'pass' with your code
-    pass

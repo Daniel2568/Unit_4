@@ -36,3 +36,22 @@ Rewrite the function print_star_square without using print_6_stars.
 
 Note that there are two ways (at least) to get the above output, so just try doing both!
 '''
+
+#first loop
+# def print_6_stars():
+#     my_string = ''
+#     for i in range(0, 6):
+#         my_string += ' *'
+#     print(my_string)
+
+# print_6_stars()
+
+#print square
+def print_star_square():
+    for i in range(6):
+        my_string = ''
+        for i in range(0, 6):
+            my_string += ' *'
+        print(my_string)
+
+print_star_square()
