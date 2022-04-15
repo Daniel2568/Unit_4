@@ -110,29 +110,86 @@ def view_list(list):
 
         count += 1
     print(list_string)
-    
+#Create a function, all_in_one, that will put all the shopping lists 
+#into a single combined list using a for loop
+def all_in_one():
+    combined_list = []
+
+    for list in shopping_lists:
+        for item in list:
+            combined_list.append(item)
+
+    print(combined_list)
+
+
+# Create a function, count_q_tips, which will go through all items of the list and
+# keep a count of how many times'q-tips' occurs.
+def count_q_tips(list_choice):
+    count_q_tips = 0
+
+    for item in shopping_lists[list_choice]:
+        if item == 'q_tips':
+            count_q_tips += 1
+
+    print(f"There are {count_q_tips} in this list")
+
+#In order to make the shopping lists more calcium rich, write a function, 
+#drink_more_milk, that adds 'milk' to each of the lists (unless it's already there).
+def drink_more_milk():
+
+    for i in range(len(shopping_lists)):
+        if 'milk' not in shopping_lists[i]:
+            shopping_lists[i].append(', milk')
+
+#You can't have milk without cookies. Write a function if_you_give_a_moose_a_cookie, that will go through every 
+#element of shopping_cart and update 'milk' to be 'milk and cookies'
+def if_you_give_a_moose_a_cookie():
+    for i in range(len(shopping_lists)):
+        for j in range(len(list)):
+            if shopping_lists[i][j] == 'milk':
+                shopping_lists[i][j] = 'milk & cookies'
+
 shopping_lists = [
     ['toothpaste', 'q-tips', 'milk'],
     ['milk', 'candy', 'apples'],
     ['planner', 'pencils', 'q-tips']
     ]
 
-user_choice = input("Choose 1 = update item, 2 = view item, or 3 = view list>")
+while True:
+    user_choice = input("Choose 1 = update item, 2 = view item, 3 = view list, 4 = combine all lists, 5 = count number of q-tips in list, 6 = add milk in list>")
 
-if user_choice == '1':
-    list_choice = int(input("Which list contains the item you want to change?>")) -1
-    item_choice = int(input("Which item number would you like to update?>")) -1
-    new_item = input("What item do you want to add?>")
+    if user_choice == '1':
+        list_choice = int(input("Which list contains the item you want to change?>")) -1
+        item_choice = int(input("Which item number would you like to update?>")) -1
+        new_item = input("What item do you want to add?>")
 
-    update_item(list_choice, item_choice, new_item)
+        update_item(list_choice, item_choice, new_item)
 
-elif user_choice == '2':
-    list_choice = int(input("Which list contains the item you would like to view?>")) -1
-    item_choice = int(input("Which item number would you view?>")) -1
+    elif user_choice == '2':
+        list_choice = int(input("Which list contains the item you would like to view?>")) -1
+        item_choice = int(input("Which item number would you view?>")) -1
 
-    view_item(list_choice, item_choice)
+        view_item(list_choice, item_choice)
 
-elif user_choice == '3':
-    list_choice = int(input("Which list number do you want to view?>")) -1
+    elif user_choice == '3':
+        list_choice = int(input("Which list number do you want to view?>")) -1
 
-    view_list(list_choice)
+        view_list(list_choice)
+
+    elif user_choice == '4':
+        all_in_one()
+
+    elif user_choice == '5':
+        user_choice = int(input("Which list do you want to know the number of q_tips?>")) -1
+
+        count_q_tips(user_choice)
+
+    elif user_choice == '6':
+        drink_more_milk() 
+    elif user_choice == '7':
+        if_you_give_a_moose_a_cookie()
+    elif user_choice == '7':
+            pass
+
+
+
