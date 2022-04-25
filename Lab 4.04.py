@@ -110,6 +110,10 @@ def view_list(list):
 
         count += 1
     print(list_string)
+
+def quit():
+    quit == True 
+
 #Create a function, all_in_one, that will put all the shopping lists 
 #into a single combined list using a for loop
 def all_in_one():
@@ -154,9 +158,9 @@ shopping_lists = [
     ['milk', 'candy', 'apples'],
     ['planner', 'pencils', 'q-tips']
     ]
-
-while True:
-    user_choice = input("Choose 1 = update item, 2 = view item, 3 = view list, 4 = combine all lists, 5 = count number of q-tips in list, 6 = add milk in list>")
+quit = False
+while quit == False:
+    user_choice = input("Choose 1 = update item, 2 = view item, 3 = view list, 4 = combine all lists, 5 = count number of q-tips in list, 6 = add milk in list, 7 = change milk to milk and cookies, 8 = quit>")
 
     if user_choice == '1':
         list_choice = int(input("Which list contains the item you want to change?>")) -1
@@ -185,11 +189,26 @@ while True:
         count_q_tips(user_choice)
 
     elif user_choice == '6':
-        drink_more_milk() 
+        user_choice = int(input("Which list do you want to add milk to?>")) -1
+        
+        drink_more_milk()
+
     elif user_choice == '7':
-        if_you_give_a_moose_a_cookie()
-    elif user_choice == '7':
-            pass
+        if_you_give_a_moose_a_cookie("Which list would you like to change milk to milk and cookies?>")
+
+    elif user_choice == '8':
+        quit == True
+        print("Thanks for playing, have a great rest of your day.")
+        break
+
+    
+
+        
+    
+
+
+
+
 
 
 
