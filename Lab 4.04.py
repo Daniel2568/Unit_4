@@ -189,9 +189,7 @@ while quit == False:
         count_q_tips(user_choice)
 
     elif user_choice == '6':
-        user_choice = int(input("Which list do you want to add milk to?>")) -1
-        
-        drink_more_milk()
+        drink_more_milk("Which list would you like to add milk to?>")
 
     elif user_choice == '7':
         if_you_give_a_moose_a_cookie("Which list would you like to change milk to milk and cookies?>")
@@ -199,7 +197,7 @@ while quit == False:
     elif user_choice == '8':
         quit == True
         print("Thanks for playing, have a great rest of your day.")
-        break
+        break 
 
     
 
